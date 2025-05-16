@@ -10,5 +10,10 @@ COPY . /app
 # Install dependencies (if any)
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the app
-CMD ["python", "app.py"]
+# Add a different CMD
+CMD ["python3", "alternate_app.py"]
+
+
+
+
+  
