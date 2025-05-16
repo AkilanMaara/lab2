@@ -4,11 +4,14 @@ FROM python:3.9-slim
 # Set working directory
 WORKDIR /app
 
-# Copy files to container
+# Copy all files to the container
 COPY . /app
 
-# Install dependencies (if any)
+# Install dependencies safely
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the app
+# Expose a port (optional)
+EXPOSE 5000
+
+# Start the application
 CMD ["python", "app.py"]
